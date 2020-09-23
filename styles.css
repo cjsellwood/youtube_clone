@@ -297,7 +297,7 @@ body * {
 .perception-total {
   background-color: rgb(212, 212, 212);
   width: 135px;
-  margin-left: calc(100vw - 360px - 50px - 400px);
+  margin-left: min(calc(100vw - 360px - 50px - 400px), 910px);
 }
 
 .perception-positive {
@@ -308,10 +308,15 @@ body * {
 
 @media only screen and (max-width: 1000px) {
   .perception-total {
-    grid-template-areas: "video" "sidebar" "comments";
     margin-left: max(calc(100vw - 360px - 50px), 81px);
   }
 }
+
+/* @media only screen and (min-width: 1660px) {
+  .perception-total {
+    margin-left: 888px;
+  }
+} */
 
 /* Subscription information and button */
 .subscription-container {
@@ -377,9 +382,14 @@ body * {
 .description-container {
   margin-left: 63px;
   margin-top: 5px;
-  width: 650px;
+  max-width: 640px;
   font-size: 14px;
   line-height: 21px;
+}
+
+.description-container p {
+  height: 4.7em;
+  overflow: hidden;
 }
 
 #show-more-button {
