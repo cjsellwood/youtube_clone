@@ -82,7 +82,7 @@ body * {
 
 #search-button:hover {
   background-color: rgb(235, 235, 235);
-} 
+}
 
 #search-button:hover::after {
   content: "Search";
@@ -107,7 +107,7 @@ body * {
 
 @media only screen and (max-width: 1200px) {
   #search-input {
-    width: calc(100vw - 600px)
+    width: calc(100vw - 600px);
   }
 }
 
@@ -127,7 +127,7 @@ body * {
 
 .icons {
   filter: invert(48%) sepia(0%) saturate(1313%) hue-rotate(288deg)
-  brightness(83%) contrast(80%);
+    brightness(83%) contrast(80%);
   width: 20px;
   height: 20px;
   padding: 5px;
@@ -153,11 +153,134 @@ body * {
   }
 }
 
-
-
-
-main {
+/* Main content */
+.main-container {
+  margin-top: 56px;
   background-color: rgb(246, 246, 246);
   width: 100vw;
   height: 1000px;
+  display: grid;
+  grid-template-areas:
+    "video sidebar"
+    "comments sidebar";
+  grid-template-columns: 1fr 400px;
+}
+
+.main-container > div {
+  /* outline: 1px solid green; */
+}
+
+.video {
+  grid-area: video;
+}
+
+.sidebar {
+  grid-area: sidebar;
+}
+
+.comments {
+  grid-area: comments;
+}
+
+@media only screen and (max-width: 1000px) {
+  .main-container {
+    grid-template-areas: "video" "sidebar" "comments";
+    grid-template-columns: 1fr;
+  }
+}
+
+.video-content {
+  margin: 25px;
+}
+
+.video-wrapper {
+  position: relative;
+  padding-bottom: 62.5%;
+  height: 0;
+}
+
+.video-embed {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.video-details {
+  padding-top: 20px;
+}
+
+.video-title {
+  font-size: 18px;
+  height: 25px;
+  margin: 5px 0;
+}
+
+.video-data {
+  height: 40px;
+  color: rgb(96, 96, 96);
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.video-data > p {
+  padding-top: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  width: calc(100vw - 360px - 50px);
+  min-width: 50px;
+}
+
+.video-button-container {
+  height: 40px;
+  width: 360px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.video-button {
+  color: rgb(96, 96, 96);
+  background-color: transparent;
+  border: none;
+  outline: none;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  border-radius: 2px;
+  margin: 0px 5px;
+  cursor: pointer;
+  position: relative;
+}
+
+.video-button:focus {
+  outline: 2px solid black;
+  outline-style: auto;
+}
+
+.video-button > img,
+.video-button > svg {
+  width: 20px;
+  height: 20px;
+  filter: invert(48%) sepia(0%) saturate(1313%) hue-rotate(288deg)
+    brightness(103%) contrast(80%);
+  padding-right: 5px;
+}
+
+#like-button:hover::after,
+#dislike-button:hover::after,
+#share-button:hover::after {
+  content: "Search";
+  position: absolute;
+  top: 50px;
+  left: 8px;
+  color: white;
+  background-color: gray;
+  padding: 5px;
+}
+
+#share-button:hover::after {
+  left: 16px;
 }
