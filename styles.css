@@ -1,0 +1,45 @@
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  height: 60px;
+  width: 100vw;
+  outline: 2px solid rgb(0, 0, 0);
+}
+
+.navbar > * {
+  margin: 10px;
+}
+
+.logo-div {
+  display: flex;
+  align-items: center;
+}
+
+.logo-div > * {
+  margin: 10px;
+}
+
+#list-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.icon-div {
+  display: flex;
+  font-size: 0.7em;
+  color: rgb(96, 96, 96);
+}
+
+#logo-icon {
+  width: 80px;
+  height: 18px;
+  margin: 2px;
+}
+
