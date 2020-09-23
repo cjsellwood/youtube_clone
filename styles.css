@@ -166,10 +166,6 @@ body * {
   grid-template-columns: 1fr 400px;
 }
 
-.main-container > div {
-  /* outline: 1px solid green; */
-}
-
 .video {
   grid-area: video;
 }
@@ -230,8 +226,8 @@ body * {
   padding-top: 5px;
   white-space: nowrap;
   overflow: hidden;
-  width: calc(100vw - 360px - 50px);
-  min-width: 50px;
+  width: calc(100vw - 360px - 50px - 400px);
+  min-width: 82px;
 }
 
 .video-button-container {
