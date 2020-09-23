@@ -12,6 +12,7 @@ body * {
   height: 56px;
   width: 100vw;
   background-color: white;
+  z-index: 1000;
 }
 
 .navbar > * {
@@ -117,8 +118,7 @@ body * {
   }
 }
 
-/* Icons */
-
+/* Navbar Icons */
 .navbar-icons {
   display: flex;
   align-items: center;
@@ -164,10 +164,14 @@ body * {
     "video sidebar"
     "comments sidebar";
   grid-template-columns: 1fr 400px;
+  max-width: 1650px;
+  margin-left: auto;
+  margin: 56px auto 0 auto;
 }
 
 .video {
   grid-area: video;
+  max-width: 1250px;
 }
 
 .sidebar {
@@ -176,6 +180,7 @@ body * {
 
 .comments {
   grid-area: comments;
+  max-width: 1250px;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -187,12 +192,14 @@ body * {
 
 .video-content {
   margin: 25px;
+  max-width: 1250px;
 }
 
 .video-wrapper {
   position: relative;
   padding-bottom: 62.5%;
   height: 0;
+  max-height: 781.25px;
 }
 
 .video-embed {
@@ -279,4 +286,28 @@ body * {
 
 #share-button:hover::after {
   left: 16px;
+}
+
+/* Like/Dislike bar and horizontal separator */
+.perception-container {
+  border-bottom: 1px solid rgb(212, 212, 212);
+}
+
+.perception-total {
+  background-color: rgb(212, 212, 212);
+  width: 135px;
+  margin-left: calc(100vw - 360px - 50px - 400px);
+}
+
+.perception-positive {
+  background-color: gray;
+  height: 2px;
+  width: 95%;
+}
+
+@media only screen and (max-width: 1000px) {
+  .perception-total {
+    grid-template-areas: "video" "sidebar" "comments";
+    margin-left: max(calc(100vw - 360px - 50px), 81px);
+  }
 }
