@@ -1,4 +1,4 @@
-body {
+body * {
   font-family: "Roboto", sans-serif;
 }
 
@@ -8,15 +8,17 @@ body {
   left: 0;
   display: flex;
   align-items: center;
-  height: 60px;
+  justify-content: space-between;
+  height: 56px;
   width: 100vw;
-  outline: 2px solid rgb(0, 0, 0);
+  background-color: white;
 }
 
 .navbar > * {
   margin: 10px;
 }
 
+/* Left section */
 .logo-div {
   display: flex;
   align-items: center;
@@ -29,6 +31,7 @@ body {
 #list-icon {
   width: 24px;
   height: 24px;
+  cursor: pointer;
 }
 
 .icon-div {
@@ -41,5 +44,101 @@ body {
   width: 80px;
   height: 18px;
   margin: 2px;
+  cursor: pointer;
 }
 
+/* Search section */
+.search-div {
+  height: 32px;
+  display: flex;
+  border: 1px solid rgb(200, 200, 200);
+  border-radius: 2px;
+}
+
+#search-input {
+  width: 550px;
+  height: 32px;
+  border: 1px solid transparent;
+  border-right: 1px solid rgb(200, 200, 200);
+  font-size: 1em;
+  padding-left: 10px;
+  border-radius: 2px;
+  outline: none;
+}
+
+#search-input:focus {
+  border: 1px solid rgb(0, 0, 170);
+}
+
+#search-button {
+  width: 65px;
+  height: 32px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background-color: rgb(245, 245, 245);
+  position: relative;
+}
+
+#search-button:hover {
+  background-color: rgb(235, 235, 235);
+} 
+
+#search-button:hover::after {
+  content: "Search";
+  position: absolute;
+  top: 50px;
+  left: 8px;
+  color: white;
+  background-color: gray;
+  padding: 5px;
+}
+
+#search-button:hover > #search-icon {
+  filter: brightness(0%);
+}
+
+#search-icon {
+  width: 15px;
+  height: 15px;
+  filter: invert(48%) sepia(0%) saturate(1313%) hue-rotate(288deg)
+    brightness(103%) contrast(80%);
+}
+
+/* Icons */
+
+.navbar-icons {
+  /* width: 204px; */
+  display: flex;
+  align-items: center;
+  margin-right: 40px;
+}
+
+.icons {
+  filter: invert(48%) sepia(0%) saturate(1313%) hue-rotate(288deg)
+  brightness(83%) contrast(80%);
+  width: 20px;
+  height: 20px;
+  padding: 5px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+#person-icon {
+  height: 32px;
+  width: 32px;
+  margin: 0px 10px;
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+
+
+
+
+
+main {
+  background-color: rgb(246, 246, 246);
+  width: 100vw;
+  height: 1000px;
+}
