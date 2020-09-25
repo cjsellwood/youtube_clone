@@ -153,12 +153,6 @@ body * {
   }
 }
 
-/*
-at 1400px
-video-content 975px;
-sidebar 425px
-
-*/
 body {
   display: flex;
   justify-content: center;
@@ -173,8 +167,10 @@ body {
   display: grid;
   grid-template-areas:
     "video sidebar"
-    "comments sidebar";
+    "comments sidebar"
+    "other sidebar";
   grid-template-columns: 1fr 400px;
+  grid-auto-rows: auto auto 1fr;
   grid-column-gap: 25px;
   max-width: 1700px;
   margin: 56px 25px 0 25px;
@@ -322,7 +318,7 @@ body {
 
 @media only screen and (max-width: 1000px) {
   .perception-total {
-    margin-left: max(calc(100vw - 360px - 50px), 81px);
+    margin-left: max(calc(100vw - 360px - 65px), 81px);
   }
 }
 
@@ -388,7 +384,7 @@ body {
 
 /* Description section */
 .description-container {
-  margin: 5px 0 20px 63px;
+  margin: 5px 0 0px 63px;
   max-width: 640px;
   font-size: 14px;
   line-height: 21px;
@@ -414,6 +410,7 @@ body {
   grid-area: comments;
   max-width: 1250px;
   padding: 25px;
+  align-self: flex-start;
 }
 
 .comments-top-container {
@@ -662,6 +659,7 @@ body {
 .sidebar-image {
   width: 168px;
   height: 94px;
+  transition: opacity 0.5s;
 }
 
 .sidebar-image:hover {
