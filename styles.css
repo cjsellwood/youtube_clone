@@ -2,7 +2,7 @@ body * {
   font-family: "Roboto", sans-serif;
 }
 
-.navbar {
+.header {
   position: fixed;
   top: 0;
   left: 0;
@@ -15,11 +15,11 @@ body * {
   z-index: 1000;
 }
 
-.navbar > * {
+.header > * {
   margin: 10px;
 }
 
-/* Left section */
+/* Left section of header */
 .logo-div {
   display: flex;
   align-items: center;
@@ -118,8 +118,8 @@ body * {
   }
 }
 
-/* Navbar Icons */
-.navbar-icons {
+/* Header Icons */
+.header-icons {
   display: flex;
   align-items: center;
   margin-right: 40px;
@@ -478,7 +478,6 @@ body {
 }
 
 /* Comments from people */
-
 .comment-list-item {
   display: flex;
   margin: 20px 0;
